@@ -1,0 +1,104 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class TelaPrincipalVivaCore extends JFrame {
+
+    public TelaPrincipalVivaCore() {
+        // Configurações da janela
+        setTitle("VivaCore - Dashboard");
+        setSize(900, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        // Painel principal
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        // Barra lateral
+        JPanel sidePanel = new JPanel();
+        sidePanel.setLayout(new BoxLayout(sidePanel, BoxLayout.Y_AXIS));
+        sidePanel.setBackground(new Color(39, 174, 96));
+        sidePanel.setPreferredSize(new Dimension(200, getHeight()));
+
+        String[] menuItems = {"Dashboard", "Criar Pesquisa", "Gerenciar Pacientes", 
+                              "Exames e Medicamentos", "Relatórios", "Sair"};
+        for (String item : menuItems) {
+            JButton menuButton = new JButton(item);
+            menuButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+            menuButton.setMaximumSize(new Dimension(180, 40));
+            menuButton.setBackground(new Color(39, 174, 96));
+            menuButton.setForeground(Color.WHITE);
+            menuButton.setFocusPainted(false);
+            menuButton.setFont(new Font("Arial", Font.BOLD, 14));
+            sidePanel.add(Box.createRigidArea(new Dimension(0, 10))); // Espaçamento
+            sidePanel.add(menuButton);
+        }
+
+        // Área principal
+        JPanel contentPanel = new JPanel(new BorderLayout());
+        contentPanel.setBackground(new Color(240, 248, 245));
+        contentPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
+
+        // Título
+        JLabel titleLabel = new JLabel("Bem-vindo ao Sistema VivaCore", JLabel.LEFT);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        titleLabel.setForeground(new Color(39, 174, 96));
+        contentPanel.add(titleLabel, BorderLayout.NORTH);
+
+        // Painel de estatísticas
+        JPanel statsPanel = new JPanel(new GridLayout(1, 3, 20, 20));
+        statsPanel.setBackground(new Color(240, 248, 245));
+        statsPanel.add(createStatCard("Pesquisas Ativas", "3"));
+        statsPanel.add(createStatCard("Pacientes Cadastrados", "50"));
+        statsPanel.add(createStatCard("Exames Pendentes", "10"));
+        contentPanel.add(statsPanel, BorderLayout.CENTER);
+
+        // Painel de links rápidos
+        JPanel quickLinksPanel = new JPanel(new GridLayout(2, 2, 20, 20));
+        quickLinksPanel.setBackground(new Color(240, 248, 245));
+        quickLinksPanel.add(createQuickLinkButton("Acompanhar Pacientes"));
+        quickLinksPanel.add(createQuickLinkButton("Criar Nova Pesquisa"));
+        quickLinksPanel.add(createQuickLinkButton("Gerar Relatórios"));
+        quickLinksPanel.add(createQuickLinkButton("Gerenciar Exames"));
+
+        contentPanel.add(quickLinksPanel, BorderLayout.SOUTH);
+
+        // Adiciona os painéis ao JFrame
+        mainPanel.add(sidePanel, BorderLayout.WEST);
+        mainPanel.add(contentPanel, BorderLayout.CENTER);
+        add(mainPanel);
+    }
+
+    private JPanel createStatCard(String title, String value) {
+        JPanel card = new JPanel(new BorderLayout());
+        card.setBorder(BorderFactory.createLineBorder(new Color(220, 220, 220), 1));
+        card.setBackground(Color.WHITE);
+
+        JLabel titleLabel = new JLabel(title, JLabel.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        titleLabel.setForeground(new Color(100, 100, 100));
+
+        JLabel valueLabel = new JLabel(value, JLabel.CENTER);
+        valueLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        valueLabel.setForeground(new Color(39, 174, 96));
+
+        card.add(titleLabel, BorderLayout.NORTH);
+        card.add(valueLabel, BorderLayout.CENTER);
+        return card;
+    }
+
+    private JButton createQuickLinkButton(String text) {
+        JButton button = new JButton(text);
+        button.setBackground(Color.WHITE);
+        button.setForeground(new Color(39, 174, 96));
+        button.setFocusPainted(false);
+        button.setFont(new Font("Arial", Font.BOLD, 14));
+        return button;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            TelaPrincipalVivaCore tela = new TelaPrincipalVivaCore();
+            tela.setVisible(true);
+        });
+    }
+}

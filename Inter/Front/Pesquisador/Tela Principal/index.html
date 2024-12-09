@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Pesquisador - VivaCore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu Lateral -->
+    <aside class="sidebar">
+      <div class="logo">
+        <h2>VivaCore</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Gerenciamento de Exames</a></li>
+          <li><a href="#">Controle de Medicamentos</a></li>
+          <li><a href="#">Relatórios de Pesquisa</a></li>
+          <li><a href="#">Gerenciamento de Pacientes</a></li>
+          <li><a href="#">Verificar Candidatos</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <header>
+        <div class="user-info">
+          <span>Bem-vindo, Dr. João Silva</span>
+          <button class="logout-btn">Sair</button>
+        </div>
+      </header>
+
+      <!-- Cards do Painel -->
+      <section class="cards">
+        <div class="card">
+          <h3>Gerenciamento de Exames</h3>
+          <p>Exames pendentes: 3</p>
+          <button class="btn">Ver Exames</button>
+        </div>
+        <div class="card">
+          <h3>Controle de Medicamentos</h3>
+          <p>Medicamentos prescritos: 7</p>
+          <button class="btn">Ver Medicamentos</button>
+        </div>
+        <div class="card">
+          <h3>Relatórios de Pesquisa</h3>
+          <p>Relatórios gerados: 5</p>
+          <button class="btn">Ver Relatórios</button>
+        </div>
+        <div class="card">
+          <h3>Gerenciamento de Pacientes</h3>
+          <p>Pacientes em acompanhamento: 12</p>
+          <button class="btn">Ver Pacientes</button>
+        </div>
+        <div class="card">
+          <h3>Verificação de Candidatos</h3>
+          <p>Candidatos a serem avaliados: 2</p>
+          <button class="btn">Ver Candidatos</button>
+        </div>
+      </section>
+
+      <!-- Resumo de Consultas e Exames -->
+      <section class="overview">
+        <div class="overview-item">
+          <h4>Total de Consultas</h4>
+          <p>5 Consultas realizadas</p>
+        </div>
+        <div class="overview-item">
+          <h4>Exames Agendados</h4>
+          <p>2 Exames agendados</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

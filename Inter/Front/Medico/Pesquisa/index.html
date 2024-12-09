@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VivaCore - Criar Pesquisa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Criar Nova Pesquisa</h1>
+        </header>
+
+        <form action="#" method="POST" class="form-criacao">
+            <div class="section">
+                <label for="nomePesquisa">Nome da Pesquisa</label>
+                <input type="text" id="nomePesquisa" name="nomePesquisa" required>
+            </div>
+
+            <div class="section">
+                <label for="objetivoPesquisa">Objetivo da Pesquisa</label>
+                <textarea id="objetivoPesquisa" name="objetivoPesquisa" rows="4" required></textarea>
+            </div>
+
+            <div class="section">
+                <label for="requisitosPacientes">Requisitos dos Pacientes</label>
+                <textarea id="requisitosPacientes" name="requisitosPacientes" rows="4" required></textarea>
+            </div>
+
+            <div class="section">
+                <label for="tratamentos">Tratamentos Envolvidos</label>
+                <textarea id="tratamentos" name="tratamentos" rows="4" required></textarea>
+            </div>
+
+            <div class="section">
+                <label for="examesNecessarios">Exames Necessários</label>
+                <textarea id="examesNecessarios" name="examesNecessarios" rows="4" required></textarea>
+            </div>
+
+            <div class="section">
+                <label for="gruposPacientes">Grupos de Pacientes</label>
+                <input type="text" id="gruposPacientes" name="gruposPacientes" required>
+            </div>
+
+            <div class="section">
+                <label for="acompanhamento">Tipo de Acompanhamento</label>
+                <input type="text" id="acompanhamento" name="acompanhamento" required>
+            </div>
+
+            <div class="section">
+                <label for="parametros">Parâmetros de Exames e Medicamentos</label>
+                <textarea id="parametros" name="parametros" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-criar">Criar Pesquisa</button>
+        </form>
+    </div>
+</body>
+</html>

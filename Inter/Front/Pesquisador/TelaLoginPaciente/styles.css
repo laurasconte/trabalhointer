@@ -1,0 +1,114 @@
+/* Cores do VivaCore */
+:root {
+    --cor-principal: #4CAF50; /* Verde principal */
+    --cor-secundaria: #009688; /* Verde água */
+    --cor-secundaria-clara: #80CBC4; /* Verde claro */
+    --cor-destaque: #FF5722; /* Laranja para botões de ação */
+    --cor-fundo: #F4F7FA; /* Fundo claro */
+    --cor-texto: #333; /* Texto principal */
+    --cor-card: #FFFFFF; /* Branco para cards */
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-card {
+    background-color: var(--cor-card);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--cor-texto);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--cor-principal);
+    outline: none;
+}
+
+.actions {
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #388E3C; /* Verde escuro */
+}
+
+.forgot-password {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: var(--cor-destaque);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #e64a19; /* Tom mais escuro de laranja */
+}
